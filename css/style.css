@@ -201,19 +201,28 @@ ul li{
     text-align: center;
 }
 
-.main-body .categories .music-card .music-text h4{
-    color: white;
-    padding-top: 5px;
+.main-body .categories .music-card .music-text *{
+    padding-top: 10px;
 }
 
-.main-body .categories .music-card .music-text h5{
-    padding-top: 5px;
-    color: lightgray;
+.main-body .categories .music-card .music-text h4 a{
+    color: white;
+}
+
+.main-body .categories .music-card .music-text h5 a{
+    color: gray;
+}
+
+.main-body .categories .img-card{
+    max-width: 200px;
+    max-height: 200px;
+    position: relative;
 }
 
 
 .main-body .categories .img-card img{
     width: 100%;
+    display: block;
 }
 
 .main-body .categories .music-row-2{
@@ -225,6 +234,39 @@ ul li{
 .main-body .categories .music-row-2 .img-circle img{
     border-radius: 50%;
 }
+
+.main-body .categories .img-card .overlay{
+    display: none;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(211,211,211,0.2)
+}
+
+.main-body .categories .img-card .overlay i{
+    display: none;
+}
+
+.main-body .categories .img-card:hover .overlay{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.main-body .categories .img-card:hover i{
+    display: block;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.main-body a{
+    text-decoration: none;
+}
+
 
 
 
