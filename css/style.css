@@ -9,3 +9,60 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
+
+body{
+    height: 100vh;
+}
+
+
+/* MAIN */
+.main-layout{
+    height: calc(100vh - 100px);
+    display: flex;
+}
+
+.main-colonna-sx{
+    width: 200px;
+}
+
+.main-colonna-dx{
+    width: calc(100% - 200px);
+}
+
+
+/* FOOTER */
+footer{
+    background-color: grey;
+    color: white;
+    height: 100px;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+
+/* DEBUG */
+
+.debug .main-layout .main-colonna-sx{
+    background-color: black;
+    color: white;
+}
+
+.debug .main-layout .main-colonna-dx .main-header{
+    background-color: grey;
+    height: 50px;
+}
+
+.debug .main-layout .main-colonna-dx .main-body{
+    height: calc(100vh - 50px - 100px);
+    overflow-y: auto;
+}
+
+.debug .main-layout .main-colonna-dx .main-body div{
+    height: 200px;
+}
