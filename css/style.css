@@ -17,7 +17,7 @@ body{
 
 /* MAIN */
 .main-layout{
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     display: flex;
 }
 
@@ -34,14 +34,143 @@ body{
 footer{
     background-color: grey;
     color: white;
-    height: 100px;
+    height: 80px;
 }
 
 .footer-row{
+    height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;   
+}
+
+    
+.footer-row .player-center{
+    width: calc(100% / 3);
+}
+
+.footer-row .player-sx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-row .player-sx > *{
+    margin-left: 10px;
+}
+
+.footer-row .player-sx .img-player{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.footer-row .player-sx .img-player img{
+    width: 100%;
+}
+
+.footer-row .player-sx .title{
+    font-weight: bold;
+}
+
+.footer-row .player-sx div span{
+    color: lightgray;
+}
+
+.footer-row .player-sx div:last-child{
+    margin-left: 20px;
+}
+
+.footer-row .player-sx div:last-child i{
+    margin-left: 8px;
+    color: lightgray;
+}
+
+
+.footer-row .player-center{
+    text-align: center;
+}
+
+.footer-row .player-center .icons *{
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.footer-row .player-dx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-row .player-dx > * {
+    margin-right: 10px;
+}
+
+.player-bar{
+    display: inline-block;
+    vertical-align: middle;
+    height: 2px;
+    padding: 2px 0;
+    background-color: green;
+}
+
+.player-bar-big{
+    width: 70%;
+}
+
+.player-bar-small{
+    width: 100px;
+}
+
+
+
+/*****************************
+        RESPONSIVE
+******************************/
+
+
+@media screen and (max-width: 1100px){
     
 }
+
+/* MOBILE */
+@media screen and (max-width: 600px){
+
+    .footer-row .player-center{
+        width: 40%;
+    }
+
+
+    .footer-row .player-sx .title{
+        font-size: 10px;
+    }
+
+
+    .footer-row .player-sx div:last-child{
+        margin-left: 0;
+    }
+
+    .footer-row .player-sx .icons-player-sx{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .footer-row .player-dx > * {
+        margin-right: 10px;
+    }
+
+    .player-bar-small{
+        width: 60px;
+    }
+
+}
+
+
+
+
+
+
 
 
 
