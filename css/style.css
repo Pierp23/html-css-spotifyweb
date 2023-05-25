@@ -98,10 +98,56 @@ ul li{
     width: calc(100% - 200px);
 }
 
+.main-nav-alternative,
+.main-nav-end-alternative{
+    display: none;
+}
+
+.main-nav-alternative .list-icons li:first-child{
+    color: white;
+}
+
+.main-nav-end-alternative{
+    color: gray;
+}
+
+
+/* COLONNA DI DESTRA */
+.main-header{
+    display: flex;
+    justify-content: right;
+    background-color: #141922;
+    height: 60px;
+}
+
+.btn-main-header{
+    text-align: right;
+    height: 100%;
+    padding: 20px 30px;
+}
+
+.btn-main a{
+    font-weight: bold;
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 18px;
+}
+
+
+.btn-main:hover{
+    transform: scale(110%);
+}
+
+
+
+
 
 /* FOOTER */
 footer{
-    background-color: grey;
+    background-color: #282828;
     color: white;
     height: 80px;
 }
@@ -240,7 +286,47 @@ footer{
 
 
 @media screen and (max-width: 600px){
+    
+    .main-colonna-sx{
+        width: 50px;
+        padding: 10px;
+    }
 
+    .main-nav-alternative,
+    .main-nav-end-alternative{
+        display: block;
+        width: 100%;
+    }
+
+    .main-nav,
+    .main-nav-end{
+        display: none;
+    }
+
+    .main-colonna-sx .main-logo {
+        width: 30px;
+    }
+
+    .main-colonna-sx ul li{
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .main-colonna-sx .main-nav-end-alternative .install{
+        text-align: center;
+    }
+
+    .main-colonna-sx .main-nav-end-alternative .install *{
+        margin-top: 20px;
+    }
+
+
+    .main-colonna-dx {
+        width: calc(100% - 50px);
+    }
+
+
+    /* FOOTER */
     .footer-row .player-center{
         width: 40%;
     }
@@ -281,11 +367,6 @@ footer{
 .debug .main-layout .main-colonna-sx{
     background-color: black;
     color: white;
-}
-
-.debug .main-layout .main-colonna-dx .main-header{
-    background-color: grey;
-    height: 50px;
 }
 
 .debug .main-layout .main-colonna-dx .main-body{
