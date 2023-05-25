@@ -14,6 +14,15 @@ body{
     height: 100vh;
 }
 
+ul li{
+    list-style: none;
+    margin-top: 15px;
+    padding-left: 10px;
+    color: gray;
+    vertical-align: middle;
+}
+
+
 
 /* MAIN */
 .main-layout{
@@ -23,6 +32,66 @@ body{
 
 .main-colonna-sx{
     width: 200px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.main-colonna-sx > div{
+    margin-top: 10px;
+}
+
+.main-colonna-sx .main-logo {
+    width: 130px;
+}
+
+.main-nav div:not(.main-logo){
+    margin-top: 20px;
+}
+
+.main-nav .list-playlist i{
+    vertical-align: middle;
+}
+
+.main-nav ul li:hover{
+    color: white;
+    border-left: 2px solid lime;
+    cursor: pointer;
+}
+
+.main-nav-end{
+    margin-right: 20px;
+    margin-bottom: 20px;
+    justify-self:flex-end;
+}
+
+.main-nav-end hr{
+    margin: 10px 0;
+}
+
+.main-nav-end div{
+    color: gray;
+    margin-right: 10px;
+}
+
+.main-nav-end i{
+    margin-right: 8px;
+}
+
+.main-nav-end i:last-child{
+    vertical-align: middle;
+}
+
+.main-nav-end div span{
+    color: white;
+    font-weight: bold;
+}
+
+.main-nav-end .install:hover{
+    color: white;
+    cursor: pointer;
 }
 
 .main-colonna-dx{
@@ -77,15 +146,26 @@ footer{
     color: lightgray;
 }
 
-.footer-row .player-sx div:last-child{
-    margin-left: 20px;
+.footer-row .player-sx .title span:hover{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
-.footer-row .player-sx div:last-child i{
+.footer-row .player-sx .icons-player-sx i{
     margin-left: 8px;
     color: lightgray;
 }
 
+.footer-row .player-sx .icons-player-sx i:hover{
+    color: white;
+    cursor: pointer;
+}
+
+
+.footer-row .player-sx div:last-child{
+    margin-left: 20px;
+}
 
 .footer-row .player-center{
     text-align: center;
@@ -96,13 +176,23 @@ footer{
     margin-bottom: 5px;
 }
 
+.footer-row .player-center .icons i:hover{
+    cursor: pointer;
+}
+
+
+.footer-row .player-center .icons #play-btn:hover{
+    transform: scale(150%);
+}
+
+
 .footer-row .player-dx{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer-row .player-dx > * {
+.footer-row .player-dx * {
     margin-right: 10px;
 }
 
@@ -134,6 +224,21 @@ footer{
 }
 
 /* MOBILE */
+@media screen and (max-width: 700px){
+
+    .footer-row .player-dx * {
+        margin-right: 7px;
+    }
+
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 600px){
 
     .footer-row .player-center{
@@ -154,10 +259,6 @@ footer{
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
-    }
-
-    .footer-row .player-dx > * {
-        margin-right: 10px;
     }
 
     .player-bar-small{
