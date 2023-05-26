@@ -51,6 +51,11 @@ ul li{
     margin-top: 20px;
 }
 
+.main-nav .list-playlist {
+    height: 50vh;
+    overflow-y: auto;
+}
+
 .main-nav .list-playlist i{
     vertical-align: middle;
 }
@@ -64,7 +69,6 @@ ul li{
 .main-nav-end{
     margin-right: 20px;
     margin-bottom: 20px;
-    justify-self:flex-end;
 }
 
 .main-nav-end hr{
@@ -150,7 +154,7 @@ ul li{
     background-color: #141922;
 }
 
-.main-body div{
+.main-body div:not(.img-card){
     padding-bottom: 10px;
 }
 
@@ -237,16 +241,21 @@ ul li{
 
 .main-body .categories .img-card .overlay{
     display: none;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     background-color: rgba(211,211,211,0.2)
 }
+.main-body .categories .img-circle .overlay{
+    border-radius: 50%;
+}
+
+
 
 .main-body .categories .img-card .overlay i{
     display: none;
 }
 
-.main-body .categories .img-card:hover .overlay{
+.main-body .categories .music-card:hover .overlay{
     display: block;
     position: absolute;
     top: 0;
@@ -254,7 +263,7 @@ ul li{
     cursor: pointer;
 }
 
-.main-body .categories .img-card:hover i{
+.main-body .categories .music-card:hover i{
     display: block;
     color: white;
     position: absolute;
@@ -349,7 +358,7 @@ footer{
     margin-bottom: 5px;
 }
 
-.footer-row .player-center .icons i:hover{
+.footer-row i:hover{
     cursor: pointer;
 }
 
@@ -374,16 +383,51 @@ footer{
     vertical-align: middle;
     height: 2px;
     padding: 2px 0;
-    background-color: green;
+    background-color: gray;
+    border-radius: 18px;
 }
 
 .player-bar-big{
     width: 70%;
+    position: relative;
+    
 }
 
 .player-bar-small{
     width: 100px;
+    position: relative;
 }
+
+.player-bar .player-bar-inside{
+    width: 30%;
+    height: 2px;
+    padding: 2px 0;
+    border-radius: 18px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.player-bar .player-bar-inside::after{
+   display: none;
+   content: '🔴';
+   position: absolute;
+   top: 0;
+   right: 0;
+   transform: translate(50% , -40%);
+}
+
+.player-bar:hover .player-bar-inside{
+    background-color: green;
+    cursor: pointer;
+}
+
+
+.player-bar:hover .player-bar-inside::after{
+    display: block;
+}
+
 
 
 
