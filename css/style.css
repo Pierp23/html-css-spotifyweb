@@ -17,7 +17,6 @@ body{
 ul li{
     list-style: none;
     margin-top: 15px;
-    padding-left: 10px;
     color: gray;
     vertical-align: middle;
 }
@@ -51,10 +50,11 @@ ul li{
     margin-top: 20px;
 }
 
-.main-nav .list-playlist {
-    height: 50vh;
+.main-nav .list-playlist .scroll-list{
+    height: 30vh;
     overflow-y: auto;
 }
+
 
 .main-nav .list-playlist i{
     vertical-align: middle;
@@ -160,13 +160,12 @@ ul li{
 
 .main-body .categories-row{
     text-align: center;
-    padding-left: 60px;
-    padding-right: 60px;
-    line-height: 20px;
+    line-height: 40px;
 }
 
 .main-body .categories-row ul li{
     display: inline-block;
+    margin: 0 8px;
 }
 
 .main-body .categories-row ul li a{
@@ -436,6 +435,8 @@ footer{
 ******************************/
 /* BREAKPOINT 1100PX */
 @media screen and (max-width: 1100px){
+
+
     .main-body .categories .music-card{
         width: calc(100% / 4 - 10px);
     }
@@ -444,6 +445,9 @@ footer{
 
 /* BREAKPOINT 700PX */
 @media screen and (max-width: 700px){
+    .main-body .categories-row{
+        padding: 0 50px;
+    }
 
     .main-body .categories .music-card{
         width: calc(100% / 2 - 10px);
@@ -496,9 +500,9 @@ footer{
     }
 
     .main-body .categories-row{
-        padding-left: 0;
-        padding-right: 0px;
+        padding: 0 20px;
     }
+   
 
 
     /* FOOTER */
