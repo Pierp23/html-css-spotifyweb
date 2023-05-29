@@ -34,7 +34,21 @@ ul li{
     padding-left: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+
+.nav-playlist{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.nav-playlist .list-playlist{
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
 }
 
@@ -51,7 +65,6 @@ ul li{
 }
 
 .main-nav .list-playlist .scroll-list{
-    height: 30vh;
     overflow-y: auto;
 }
 
@@ -116,6 +129,7 @@ ul li{
 }
 
 
+
 /* COLONNA DI DESTRA */
 .main-header{
     display: flex;
@@ -143,6 +157,8 @@ ul li{
 .btn-main:hover{
     transform: scale(110%);
 }
+
+
 
 /* MAIN-BODY */
 .main-body{
@@ -277,9 +293,6 @@ ul li{
 
 
 
-
-
-
 /* FOOTER */
 footer{
     background-color: #282828;
@@ -293,7 +306,6 @@ footer{
     justify-content: space-between;
     align-items: center;   
 }
-
     
 .footer-row .player-center{
     width: calc(100% / 3);
@@ -360,7 +372,6 @@ footer{
 .footer-row i:hover{
     cursor: pointer;
 }
-
 
 .footer-row .player-center .icons #play-btn:hover{
     transform: scale(150%);
@@ -443,6 +454,7 @@ footer{
 }
 
 
+
 /* BREAKPOINT 700PX */
 @media screen and (max-width: 700px){
     .main-body .categories-row{
@@ -458,10 +470,14 @@ footer{
     }
 }
 
+
+
 /* BREAKPOINT 600PX */
 @media screen and (max-width: 600px){
     
     .main-colonna-sx{
+        display: flex;
+        justify-content: space-between;
         width: 50px;
         padding: 10px;
     }
@@ -494,7 +510,6 @@ footer{
         margin-top: 20px;
     }
 
-
     .main-colonna-dx {
         width: calc(100% - 50px);
     }
@@ -502,19 +517,15 @@ footer{
     .main-body .categories-row{
         padding: 0 20px;
     }
-   
-
 
     /* FOOTER */
     .footer-row .player-center{
         width: 40%;
     }
 
-
     .footer-row .player-sx .title{
         font-size: 10px;
     }
-
 
     .footer-row .player-sx div:last-child{
         margin-left: 0;
@@ -529,21 +540,4 @@ footer{
     .player-bar-small{
         width: 60px;
     }
-
-}
-
-
-
-
-
-
-
-
-
-
-/* DEBUG */
-
-.debug .main-layout .main-colonna-sx{
-    background-color: black;
-    color: white;
 }
