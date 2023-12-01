@@ -1,1 +1,1 @@
-# Template
+<img width="30px" src="./project_completed.png" alt="project_completed_img" />
